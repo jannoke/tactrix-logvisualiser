@@ -8,7 +8,7 @@ Built as a single static page — no build step, no server. Open `index.html` in
 
 - Drag-and-drop CSV upload
 - Auto-detects Tactrix vs EvoScan format (manual override available)
-- Pick any numeric columns to plot, with per-series multiplier (e.g. `RPM × 0.01` so it fits next to AFR)
+- Pick any numeric columns to plot, with per-series color and multiplier controls (e.g. `RPM × 0.01` so it fits next to AFR)
 - Auto-scale mode: normalizes every series to 0–1 so shapes are comparable regardless of unit
 - Time-window slider plus mouse pan/scroll-wheel zoom inside the chart
 - Toggle between elapsed seconds and absolute timestamp (EvoScan only)
@@ -22,7 +22,7 @@ Built as a single static page — no build step, no server. Open `index.html` in
 
 1. Open `index.html` in a modern browser (or visit the GitHub Pages URL).
 2. Drag a CSV onto the **Primary log** box. The format auto-detects.
-3. Tick the columns you want to plot in the **Columns** section. Adjust the multiplier next to any column if needed (e.g. set RPM to `0.01`).
+3. Tick the columns you want to plot in the **Columns** section. Click a series color swatch to change its color, or adjust the multiplier next to any column if needed (e.g. set RPM to `0.01`).
 4. Use the time-window sliders to zoom into a portion of the run, or drag inside the chart.
 5. Optional — drag a second CSV into **Compare against** to overlay it.
 6. Click **Export PNG** to save the chart.
