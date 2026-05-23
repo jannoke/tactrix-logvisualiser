@@ -440,13 +440,18 @@ function renderColumnPicker() {
     row.className = 'col-row';
     row.innerHTML = `
       <input type="checkbox" ${sel.selected ? 'checked' : ''} />
-      <span class="swatch" style="background:${sel.color}"></span>
+      <input type="color" class="color-picker" value="${sel.color}" title="Change color" />
       <span class="name" title="${escapeHtml(name)}">${escapeHtml(name)}</span>
       <input type="number" value="${sel.multiplier}" step="0.01" title="Multiplier" />
     `;
-    const [checkbox, , , multInput] = row.children;
+    const [checkbox, colorInput, , multInput] = row.children;
     checkbox.addEventListener('change', () => {
       sel.selected = checkbox.checked;
+      updateChart();
+      updateStats();
+    });
+    colorInput.addEventListener('input', () => {
+      sel.color = colorInput.value;
       updateChart();
       updateStats();
     });
